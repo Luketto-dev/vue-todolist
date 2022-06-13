@@ -49,6 +49,7 @@ const toDoListApp = new Vue({
     el: "#note",
     data:{
         list : toDoList,
+        toDoText : ""
     },
     methods:{
         deleteToDo : function(indice){
@@ -56,7 +57,7 @@ const toDoListApp = new Vue({
         },
         addToDo : function(){
             let newTask = {
-                text : "prenotare una vacanza",
+                text : this.toDoText,
                 done: false,
             }
 
