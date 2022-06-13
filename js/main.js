@@ -55,7 +55,13 @@ const toDoListApp = new Vue({
             this.list.splice(indice,1)
         },
         addToDo : function(){
-            
+            let newTask = {
+                text : "prenotare una vacanza",
+                done: false,
+            }
+
+            this.list.push(newTask)
+
         }
     }
 })
