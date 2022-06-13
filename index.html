@@ -15,22 +15,23 @@
             <h1>
                 <span id="title">To do list</span>
             </h1>
-            <div class="text-danger">elimina lista</div>
         </header>
 
         <div id="list">
             
             <ul>
                 <li v-for = "(toDo, i) in list">
-                    <input type="checkbox">
-                    <span>
+                    <input type="checkbox" :checked ="toDo.done" >
+                    <span :class = "{lineThrough : toDo.done}">
                         {{toDo.text}}
                     </span>
+                    <span class="delete" @click="deleteToDo(i)">x</span>
                 </li>
             </ul>
             
         </div>
 
+        <input type="text">
         <div class="new">
             +
         </div>

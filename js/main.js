@@ -28,7 +28,7 @@ const toDoList = [
     },
     {
         text : "completare esercizio toDoList",
-        done: true
+        done: false
     },
     {
         text : "cercare lavoro",
@@ -49,5 +49,10 @@ const toDoListApp = new Vue({
     el: "#note",
     data:{
         list : toDoList,
+    },
+    methods:{
+        deleteToDo : function(indice){
+            this.list.splice(indice,1)
+        }
     }
 })
