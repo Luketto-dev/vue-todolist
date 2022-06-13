@@ -53,6 +53,9 @@ const toDoListApp = new Vue({
     methods:{
         deleteToDo : function(indice){
             this.list.splice(indice,1)
+        },
+        addToDo : function(){
+            
         }
     }
 })
