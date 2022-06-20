@@ -21,7 +21,7 @@
             
             <ul>
                 <li v-for = "(toDo, i) in list">
-                    <input type="checkbox" :checked ="toDo.done" >
+                    <input type="checkbox" v-model="toDo.done">
                     <span :class = "{lineThrough : toDo.done}">
                         {{toDo.text}}
                     </span>
